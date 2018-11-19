@@ -1,0 +1,23 @@
+{
+    "name": "randomstate/laravel-auth-shopify",
+    "description": "Shopify shop authorization strategy for laravel-auth",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Connor Forsyth",
+            "email": "connor@randomstate.co.uk"
+        }
+    ],
+    "require": {
+        "randomstate/laravel-auth": "^1.0",
+        "ohmybrew/basic-shopify-api": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RandomState\\LaravelAuth\\Strategies\\Shopify\\": "src"
+        }
+    },
+    "require-dev": {
+        "laravel/laravel": "^5.7"
+    }
+}
