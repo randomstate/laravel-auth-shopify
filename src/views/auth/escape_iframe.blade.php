@@ -13,14 +13,14 @@
 
 <script type='text/javascript'>
 
-  var permissionUrl = "https://{{ $shop }}/admin{!! $permissionUrl !!}";
+  var permissionUrl = encodeURI("https://{{ $shop }}/admin{!! $permissionUrl !!}");
 
   if (window.top === window.self) {
     window.location.assign(permissionUrl);
   } else {
     ShopifyApp.init({
       apiKey: "{{ $apiKey }}",
-      shopOrigin: "{{ $shop }}"
+      shopOrigin: "https://{{ $shop }}",
     });
 
     ShopifyApp.redirect(permissionUrl);
